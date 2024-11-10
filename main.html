@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Page Feel in One HTML File</title>
+    <style>
+        /* Basic styling */
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #1a1a2e; 
+            color: #eeeeee; 
+            margin: 0; 
+            padding: 0; 
+            text-align: center;
+        }
+        
+        /* Page display control */
+        .page { display: none; padding: 20px; }
+        #home { display: block; }
+        
+        /* Main header and box styling */
+        h1 { color: #ffd700; font-size: 2.5em; }
+        h2 { color: #fffa65; font-size: 1.5em; font-weight: 400; }
+        .box { margin-top: 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+        
+        /* Link buttons styling with different colors for each name */
+        .link-button { 
+            padding: 12px 25px; 
+            color: white; 
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px; 
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s; 
+        }
+        /* Individual colors for each name */
+        .harsha { background-color: #3498db; }
+        .hedgy { background-color: #e74c3c; }
+        .shiro { background-color: #2ecc71; }
+        .nighty { background-color: #9b59b6; }
+
+        /* Hover effects for all link buttons */
+        .link-button:hover { 
+            background-color: #1d6fa5; 
+            transform: scale(1.05); 
+        }
+        
+        /* Message box styling */
+        .message {
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: #333;
+            border-radius: 12px; 
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); 
+            line-height: 1.6; 
+            text-align: left;
+        }
+
+        /* Back button styling */
+        .back-button { 
+            margin-top: 20px; 
+            padding: 10px 20px; 
+            background-color: #f44336; 
+            color: white; 
+            border: none; 
+            border-radius: 8px; 
+            font-weight: bold;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .back-button:hover { 
+            background-color: #d32f2f; 
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        /* JavaScript to handle page navigation */
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Page -->
+    <div id="home" class="page">
+        <h1>Gayest thing i hav done</h1>
+        <h2>Still I appriciate the time i spent with u dumb bitches</h2>
+        <div class="box">
+            <div class="link-button harsha" onclick="showPage('harsha')">Harsha</div>
+            <div class="link-button hedgy" onclick="showPage('hedgy')">Hedgy</div>
+            <div class="link-button shiro" onclick="showPage('shiro')">Shiro</div>
+            <div class="link-button nighty" onclick="showPage('nighty')">Nighty</div>
+        </div>
+    </div>
+
+    <!-- Harsha's Page -->
+    <div id="harsha" class="page">
+        <h1>Harsha</h1>
+        <div class="message">
+            <p>U dumb bitch, I love you. I appreciate u for being there with me when I couldn’t ask anyone for help, for being there to hear me out and not judge me for doing the things I did, even the wrong ones XD. I loved the time I spent with u laughing in vc, and the support u gave me was beyond anything I could ask for or ever deserved.</p>
+            <p>I'm very, very glad I could have such a good little brother like u next to me to help me in such a time and understand what I was going through. I'm very happy u found someone u love and want to work for. I wish for nothing but happiness for u, and honestly, if everything goes well, I would love to meet u one day. Idk when, but yeah, u better work hard and study hard, okay? If not for urself, then at least for others around u.</p>
+        </div>
+        <button class="back-button" onclick="showPage('home')">Back</button>
+    </div>
+
+    <!-- Hedgy's Page -->
+    <div id="hedgy" class="page">
+        <h1>Hedgy</h1>
+        <div class="message">
+            <p>Hedgy, u dumbass bish, I know what ur going through with the loss of motivation and energy to do anything other than survive uni. And honestly, I know how discouraging everything related to what you're going through is—massive backlogs, no time to clear them up, shitloads of assignments, no time to even think about life. Just study, come home, sleep, get up, and do everything over again.</p>
+            <p>But it’s okay. I went through the same thing, my little brother, and I’m in a pretty good position still. Just sprinkle some reality with dedication rather than motivation. Try to keep ur life in ur control; try to exercise, eat well, and just, y'know, have some control. I know it’s way easier said than done, but knowing u and how smart u are, I know u can do it, lil bud.</p>
+            <p>U are a very smart kid, and honestly, seeing ur grades makes me envious. You're way smarter than me, so use it well, okay? Don’t let those with less potential get ahead of u just because they used their time well. Achieve what u came to this earth for—something u truly want from this world.</p>
+            <p>If not, how about u just study hard enough to come to Canada and meet me? I'd love to meet u someday and have a chat. If everything goes well, who knows, I'd be ur sugar daddy bbg ;) hehehehehe</p>
+        </div>
+        <button class="back-button" onclick="showPage('home')">Back</button>
+    </div>
+
+    <!-- Shiro's Page -->
+    <div id="shiro" class="page">
+        <h1>Shiro</h1>
+        <div class="message">
+            <p>U gae ._. das all fk u bottom ._. buahahaha jus kidding. I won’t take much of ur time cos ik how bad ur ADHD is, but thanks for talking to me and still being friendly with me. I know I was very wrong with how I asked Jen not to speak with u, and I was very, very stupid back then. I won’t ask for ur forgiveness, but I'll do the best I can and just help out whenever I can.</p>
+            <p>So yeah, I'll be a good big bro and help out, kay? I hope we stay chill for time to come in the future, and I hope u play some good games. Play Wukong when, dumbass U_U. Anyhow, have fun!!!</p>
+        </div>
+        <button class="back-button" onclick="showPage('home')">Back</button>
+    </div>
+
+    <!-- Nighty's Page -->
+    <div id="nighty" class="page">
+        <h1>Nighty</h1>
+        <div class="message">
+            <p>Nighty!!!! Yes, I included u duhhh. Ik we ain’t close or even know much about each other, but I had a lot—and I mean a lot—of fun playing games with u. Playing Valorant was really fun; I was a bit sad that we couldn’t grind much on Friday, Saturday, and Sunday, but it’s alright. We can’t have everything, can we!!!</p>
+            <p>Seeing u die in Dark Souls multiple times was so fun XDDDD. Honestly, no sugarcoating or anything—I appreciate u having the time to read this message I’m leaving, and I hope u don’t find it too zesty or something T_T. Like, I'm trying not to be too over the top, okay?</p>
+            <p>Anyhow, I hope u keep playing some fun games and have lots of fun. And if u want my Valorant account, just ask, okay? Cos it’s gonna just rot for idk how long. But u, sir, by the time I come back, I better see u finish Elden Ring and Sekiro, okay? It’s a big life, so keep things chill and don’t ever forget to have fun, okay? Cya!!</p>
+        </div>
+        <button class="back-button" onclick="showPage('home')">Back</button>
+    </div>
+
+</body>
+</html>
